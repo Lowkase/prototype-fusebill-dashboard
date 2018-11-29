@@ -1,0 +1,75 @@
+﻿// --------------------------------------------------------------------------------
+// MODULES - CARD
+// --------------------------------------------------------------------------------
+
+$m-card-header-height:                      53px;
+$m-card-header-padding:                     $spacing-8;
+$m-card-background:                         $color-white-100;
+$m-card-header-icon-height-width:           18px;
+
+.m-card {
+    @include transition (all $transition-timer-400ms $transition-easeInOutQuad);
+
+    background: $m-card-background;
+    box-shadow: $box-shadow;
+    margin-bottom: $spacing-21;
+
+    .m-card-hdr {
+        @include font-size(0.8750); // 14px
+        @include j-cf();
+
+        border-bottom: 1px solid $template-border-color;
+        font-weight: $font-weight-semibold;
+        min-height: $m-card-header-height;
+        padding: $m-card-header-padding $spacing-13;
+
+        .icon-title {
+            @include j-cf();
+            @include j-column(8/12);
+
+            .icon {
+                float: left;
+                margin-right: $spacing-8;
+                margin-top: $spacing-8;
+
+                svg {
+                    height: $m-card-header-icon-height-width;
+                    width: $m-card-header-icon-height-width;
+                }  
+            }
+
+            .title {
+                @include text-truncate();
+
+                float: left;
+                line-height: $m-card-header-height - $m-card-header-padding - $m-card-header-padding;
+            }            
+        }
+
+        .actions {
+            @include j-column(4/12);
+
+            > div {
+                float: right;
+                margin-left: $spacing-13;
+            }
+
+            .text-action {
+                color: $color-orange-200;
+                cursor: pointer;
+                font-weight: $font-weight-regular;
+                line-height: $m-card-header-height - $m-card-header-padding - $m-card-header-padding;
+            }
+        }
+    }
+
+    .m-card-bdy {
+        @include font-size(0.8750); // 14px
+        
+        padding: $spacing-13;
+    }
+
+    .m-card-bdy-no-padding {
+        padding: 0;
+    }
+}

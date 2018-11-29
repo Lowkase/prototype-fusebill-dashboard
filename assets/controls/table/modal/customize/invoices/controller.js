@@ -1,0 +1,1 @@
+var customizeControlInit = tableCustomersSettings[0].customizeControl;

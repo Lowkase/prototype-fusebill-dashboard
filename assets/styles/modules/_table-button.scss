@@ -1,0 +1,16 @@
+// --------------------------------------------------------------------------------
+// MODULES - TABLE - BUTTON
+// --------------------------------------------------------------------------------
+$m-table-border-color: $oldcolor-gray-200;
+
+.m-table-button {
+    color: $oldcolor-blue;
+    border: 1px solid $m-table-border-color;
+    cursor: pointer;
+    padding: 0 3px;
+    text-align: center;
+}
+
+.m-table-button:hover {
+    background: $oldcolor-gray-50;
+}
